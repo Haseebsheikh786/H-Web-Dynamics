@@ -1,0 +1,9 @@
+.DemoContainer {
+    font-weight: bold;
+}
+
+.DemoContainer h1 {
+    font-size: 44px;
+    font-weight: bold;
+    font-family: Raleway;
+}   
