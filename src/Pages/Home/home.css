@@ -145,9 +145,9 @@
 
 /* Why Choose Us section styles */
 .why-choose-us-grid {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 20px; */
 }
 
 .why-choose-us-item {
@@ -196,8 +196,19 @@
     .hero-content p {
         font-size: 1.2rem;
     }
+}
 
+@media only screen and (max-width: 600px) {
+    .HomeMainContainer {
+        margin: 2rem 2rem;
+    }
+}
 
+@media only screen and (max-width: 420px) {
+
+    .animation-line {
+        display: inline;
+    }
 }
 
 /* @media screen and (min-width: 550px) and (max-width: 1200px) {} */

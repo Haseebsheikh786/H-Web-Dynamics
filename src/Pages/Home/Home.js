@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Assuming you're using React Router for navigation
-import { Button, Card } from "reactstrap"; // Assuming you're using React Router for navigation
-import "./home.css"; // Import CSS file for styling
+import { Link } from "react-router-dom";
+import { Card } from "reactstrap";
+import "./home.css";
 import { FaShopify } from "react-icons/fa";
 
 const Home = () => {
@@ -23,7 +23,7 @@ const Home = () => {
         <section className="services-section">
           <h2 className="text-center my-5">Our Services</h2>
           <div className=" row d-flex justify-content-evenly">
-            <Card className="service-card shadow col-4 m-3">
+            <Card className="service-card shadow col-lg-4 col-md-5 col-sm-12 m-3">
               <a href="/services">
                 <i className="fas fa-laptop-code Serviceicon"></i>
                 <h3>Web Development</h3>
@@ -35,7 +35,7 @@ const Home = () => {
                 </p>
               </a>
             </Card>
-            <Card className="service-card shadow col-4 m-3">
+            <Card className="service-card shadow col-lg-4 col-md-5 col-sm-12 m-3">
               <a href="/services">
                 <FaShopify className="Serviceicon" />{" "}
                 <h3>Shopify Development</h3>
@@ -47,7 +47,7 @@ const Home = () => {
                 </p>
               </a>
             </Card>
-            <Card className="service-card shadow col-4 m-3">
+            <Card className="service-card shadow col-lg-4 col-md-5 col-sm-12 m-3">
               <a href="/services">
                 <i className="fas fa-video Serviceicon"></i>
                 <h3>Video Editing</h3>
@@ -59,7 +59,7 @@ const Home = () => {
                 </p>
               </a>
             </Card>
-            <Card className="service-card shadow col-4 m-3">
+            <Card className="service-card shadow col-lg-4 col-md-5 col-sm-12 m-3">
               <a href="/services">
                 <i className="fas fa-chart-line Serviceicon"></i>
                 <h3>Social Media Marketing</h3>
@@ -83,6 +83,7 @@ const Home = () => {
                   we are passionate about crafting exceptional
                 </span>
                 <span className="animation-line">
+                  {" "}
                   digital experiences for our clients.
                 </span>
                 <span className="animation-line">
@@ -97,17 +98,17 @@ const Home = () => {
                 <span className="animation-line">
                   and social media marketing.
                 </span>
-                <Link to="/about" className="btn btn-danger">
-                  Learn More
-                </Link>
               </p>
+              <Link to="/about" className="btn btn-danger">
+                Learn More
+              </Link>
             </div>
           </div>
         </section>
-        <section className="why-choose-us-section">
+        <section className="why-choose-us-section  ">
           <h2 className="text-center mt-5">Why Choose Us?</h2>
-          <div className="why-choose-us-grid mb-5 mt-3">
-            <Card className="why-choose-us-item shadow">
+          <div className="why-choose-us-grid mb-5 mt-3 row justify-content-evenly">
+            <Card className="why-choose-us-item shadow col-md-5 col-sm-12 col-lg-3 my-3">
               <h3>Tailored Solutions</h3>
               <p>
                 Unlock bespoke solutions crafted precisely to match your unique
@@ -116,7 +117,7 @@ const Home = () => {
                 business strategy.
               </p>
             </Card>
-            <Card className="why-choose-us-item shadow">
+            <Card className="why-choose-us-item shadow col-md-5 col-sm-12 col-lg-3 my-3">
               <h3>Expert Team</h3>
               <p>
                 Partner with a team of seasoned professionals dedicated to
@@ -125,7 +126,7 @@ const Home = () => {
                 propel your business forward.
               </p>
             </Card>
-            <Card className="why-choose-us-item shadow">
+            <Card className="why-choose-us-item shadow col-md-5 col-sm-12 col-lg-3 my-3">
               <h3>Proven Track Record</h3>
               <p>
                 Join our ever-growing family of satisfied clients who have
@@ -137,7 +138,7 @@ const Home = () => {
           </div>
         </section>
         <section className="faq-section py-5">
-          <div className="container">
+          <div className="mx-sm-5">
             <h2 className="text-center mb-5">Frequently Asked Questions</h2>
             <div className="accordion" id="faqAccordion">
               <div className="accordion-item">
@@ -226,7 +227,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
         <section className="get-in-touch-section">
           <h2>Get in Touch</h2>
           <p>

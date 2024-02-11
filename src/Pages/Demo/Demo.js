@@ -53,6 +53,9 @@ const Demo = () => {
               <div className="text-end m-2">
                 <Button color="danger">Submit</Button>
               </div>
+              <p className="mt-3">
+                Or Call Us: <a href="tel:+923427282514">+92 342 7282 514</a>
+              </p>
             </Card>
           </Col>
         </Row>
