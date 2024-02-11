@@ -1,9 +1,9 @@
 import React from "react";
 import logo from "../../assets/images/logo4.jpg";
 import { NavLink } from "react-router-dom";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import "./Footer.css";
-import { MdMail } from "react-icons/md";
+import { MdMail, MdPhone } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
@@ -22,6 +22,7 @@ const Footer = () => {
           <NavLink to="/FAQ">FAQ </NavLink>
         </nav>
       </div>
+
       <div className="footer-row">
         <div className="footer-social">
           <a href="https://facebook.com">
@@ -35,6 +36,9 @@ const Footer = () => {
           </a>
           <a href="https://instagram.com">
             <MdMail />
+          </a>
+          <a href="tel:+923427282514" style={{ textDecoration: "none" }}>
+            <MdPhone />
           </a>
         </div>
       </div>

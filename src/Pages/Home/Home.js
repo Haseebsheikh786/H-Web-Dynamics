@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Assuming you're using React Router for navigation
+import { Button, Card } from "reactstrap"; // Assuming you're using React Router for navigation
 import "./home.css"; // Import CSS file for styling
+import { FaShopify } from "react-icons/fa";
 
 const Home = () => {
   return (
     <div className="home-container">
       <div className="hero-section">
         <div className="hero-content">
-          <h1>Welcome to H Web Dynamics</h1> 
+          <h1>Welcome to H Web Dynamics</h1>
           <p>
             Bringing your vision to life with expertly crafted websites and
             digital solutions.
@@ -17,73 +19,224 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <section className="services-section">
-        <h2>Our Services</h2>
-        <div className="services-grid">
-          {/* Service Cards */}
-          <div className="service-card">
-            <i className="fas fa-laptop-code"></i>
-            <h3>Web Development</h3>
-            <p>
-              From sleek designs to robust functionalities, we craft websites
-              that stand out.
-            </p>
+      <main className="HomeMainContainer">
+        <section className="services-section">
+          <h2 className="text-center my-5">Our Services</h2>
+          <div className=" row d-flex justify-content-evenly">
+            <Card className="service-card shadow col-4 m-3">
+              <a href="/services">
+                <i className="fas fa-laptop-code Serviceicon"></i>
+                <h3>Web Development</h3>
+                <p>
+                  From concept to launch, our web development services encompass
+                  everything you need for a successful online presence. We
+                  specialize in creating responsive, user-friendly websites
+                  tailored to your unique business needs.
+                </p>
+              </a>
+            </Card>
+            <Card className="service-card shadow col-4 m-3">
+              <a href="/services">
+                <FaShopify className="Serviceicon" />{" "}
+                <h3>Shopify Development</h3>
+                <p>
+                  Take your eCommerce business to new heights with our Shopify
+                  development expertise. We build custom, visually stunning
+                  Shopify stores that drive sales and enhance customer
+                  experiences.
+                </p>
+              </a>
+            </Card>
+            <Card className="service-card shadow col-4 m-3">
+              <a href="/services">
+                <i className="fas fa-video Serviceicon"></i>
+                <h3>Video Editing</h3>
+                <p>
+                  Transform your raw footage into polished, professional videos
+                  that captivate your audience. Our video editing services cover
+                  everything from basic edits to advanced effects, ensuring your
+                  content shines across all platforms.
+                </p>
+              </a>
+            </Card>
+            <Card className="service-card shadow col-4 m-3">
+              <a href="/services">
+                <i className="fas fa-chart-line Serviceicon"></i>
+                <h3>Social Media Marketing</h3>
+                <p>
+                  Amplify your brand's online presence with our strategic social
+                  media marketing solutions. From content creation to audience
+                  engagement, we help you leverage social media platforms to
+                  build meaningful connections and drive business growth.
+                </p>
+              </a>
+            </Card>
           </div>
-          <div className="service-card">
-            <i className="fab fa-wordpress"></i>
-            <h3>WordPress & Shopify</h3>
-            <p>
-              Empower your online presence with customizable, user-friendly
-              platforms.
-            </p>
+        </section>
+        <section className="about-Section">
+          <div className="container text-center">
+            <h2 className="text-center mt-5">About Us</h2>
+            <div className="about-Content">
+              <p>
+                <span className="animation-line">At H Web Dynamics,</span>
+                <span className="animation-line">
+                  we are passionate about crafting exceptional
+                </span>
+                <span className="animation-line">
+                  digital experiences for our clients.
+                </span>
+                <span className="animation-line">
+                  With a team of skilled professionals,
+                </span>
+                <span className="animation-line">
+                  we specialize in web development,
+                </span>
+                <span className="animation-line">
+                  e-commerce solutions, video editing,
+                </span>
+                <span className="animation-line">
+                  and social media marketing.
+                </span>
+                <Link to="/about" className="btn btn-danger">
+                  Learn More
+                </Link>
+              </p>
+            </div>
           </div>
-          <div className="service-card">
-            <i className="fas fa-chart-line"></i>
-            <h3>Social Media Marketing & Video Editing</h3>
-            <p>
-              Elevate your brand with engaging content and effective social
-              strategies.
-            </p>
+        </section>
+        <section className="why-choose-us-section">
+          <h2 className="text-center mt-5">Why Choose Us?</h2>
+          <div className="why-choose-us-grid mb-5 mt-3">
+            <Card className="why-choose-us-item shadow">
+              <h3>Tailored Solutions</h3>
+              <p>
+                Unlock bespoke solutions crafted precisely to match your unique
+                vision and requirements. Your success is our priority, and we
+                tailor our services to ensure they fit seamlessly into your
+                business strategy.
+              </p>
+            </Card>
+            <Card className="why-choose-us-item shadow">
+              <h3>Expert Team</h3>
+              <p>
+                Partner with a team of seasoned professionals dedicated to
+                exceeding your expectations. With years of experience and a
+                passion for innovation, we guarantee top-notch results that
+                propel your business forward.
+              </p>
+            </Card>
+            <Card className="why-choose-us-item shadow">
+              <h3>Proven Track Record</h3>
+              <p>
+                Join our ever-growing family of satisfied clients who have
+                witnessed tangible success with our services. Our proven track
+                record speaks volumes about our commitment to delivering
+                excellence and driving meaningful results for our clients.
+              </p>
+            </Card>
           </div>
-        </div>
-      </section>
-      <section className="why-choose-us-section">
-        <h2>Why Choose Us?</h2>
-        <div className="why-choose-us-grid">
-          {/* Points on why to choose your company */}
-          <div className="why-choose-us-item">
-            <h3>Tailored Solutions</h3>
-            <p>We customize our services to suit your unique needs.</p>
+        </section>
+        <section className="faq-section py-5">
+          <div className="container">
+            <h2 className="text-center mb-5">Frequently Asked Questions</h2>
+            <div className="accordion" id="faqAccordion">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="headingOne">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    What services do you offer?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">
+                    We offer a wide range of services including web development,
+                    e-commerce solutions, video editing, and social media
+                    marketing. Our goal is to provide tailored solutions that
+                    meet your specific needs and help your business succeed
+                    online.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="headingTwo">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    How can I get started with your services?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">
+                    Getting started with us is easy! Simply contact us through
+                    our website or give us a call to discuss your project
+                    requirements. From there, we'll work closely with you to
+                    develop a customized plan that aligns with your goals and
+                    objectives.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="headingThree">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    How long does it take to complete a project?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body">
+                    The timeline for completing a project can vary depending on
+                    its complexity and your specific requirements. We'll provide
+                    you with a detailed project timeline during our initial
+                    consultation so you know exactly what to expect.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="why-choose-us-item">
-            <h3>Expert Team</h3>
-            <p>
-              Our skilled professionals ensure top-notch results every time.
-            </p>
-          </div>
-          <div className="why-choose-us-item">
-            <h3>Proven Track Record</h3>
-            <p>Join our satisfied clientele who've seen success with us.</p>
-          </div>
-        </div>
-      </section>
-      <section className="portfolio-section">
-        <h2>Our Portfolio</h2>
-        {/* Showcase your portfolio with images and descriptions */}
-        <div className="portfolio-carousel">
-          <img src="https://via.placeholder.com/400" alt="Project 1" />
-          <img src="https://via.placeholder.com/400" alt="Project 2" />
-          <img src="https://via.placeholder.com/400" alt="Project 3" />
-        </div>
-      </section>
-      <section className="get-in-touch-section">
-        <h2>Get in Touch</h2>
-        <p>Ready to elevate your digital presence? Contact us now!</p>
-        {/* Contact form component */}
-        <Link to="/contact" className="contact-link">
-          Contact Us
-        </Link>
-      </section>
+        </section>
+
+        <section className="get-in-touch-section">
+          <h2>Get in Touch</h2>
+          <p>
+            Ready to elevate your digital presence? Let's discuss your project!
+          </p>
+          <Link to="/contact">
+            <button className="btn btn-danger">Contact Us</button>
+          </Link>
+        </section>
+      </main>
     </div>
   );
 };

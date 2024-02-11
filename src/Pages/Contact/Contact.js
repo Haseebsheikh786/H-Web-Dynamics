@@ -10,7 +10,6 @@ import {
   Label,
   Row,
 } from "reactstrap";
-import { Form } from "react-router-dom";
 
 const ContactUS = () => {
   return (
@@ -31,29 +30,32 @@ const ContactUS = () => {
               <h2 className="mb-3 mx-1">CONTACT US</h2>
               <div className="d-flex justify-content-between">
                 <FormGroup>
-                  <Label for="exampleEmail">First Name </Label>
-                  <Input id="exampleEmail" name="email" type="email" />
+                  <Label for="firstName">First Name</Label>
+                  <Input id="firstName" name="firstName" type="text" />
                 </FormGroup>
                 <FormGroup>
-                  <Label for="exampleEmail">Last Name</Label>
-                  <Input id="exampleEmail" name="email" type="email" />
+                  <Label for="lastName">Last Name</Label>
+                  <Input id="lastName" name="lastName" type="text" />
                 </FormGroup>
               </div>
               <FormGroup>
-                <Label for="exampleEmail">Business Email</Label>
-                <Input id="exampleEmail" name="email" type="email" />
+                <Label for="email">Business Email</Label>
+                <Input id="email" name="email" type="email" />
               </FormGroup>
               <FormGroup>
-                <Label for="exampleEmail">Company</Label>
-                <Input id="exampleEmail" name="email" type="email" />
+                <Label for="company">Company</Label>
+                <Input id="company" name="company" type="text" />
               </FormGroup>
               <FormGroup>
-                <Label for="exampleEmail">Message</Label>
-                <Input id="exampleEmail" name="email" type="email" />
+                <Label for="message">Message</Label>
+                <Input id="message" name="message" type="textarea" />
               </FormGroup>
               <div className="text-end m-2">
                 <Button color="danger">Submit</Button>
               </div>
+              <p className="mt-3">
+                Or Call Us: <a href="tel:+923427282514">+92 342 7282 514</a>
+              </p>
             </Card>
           </Col>
         </Row>

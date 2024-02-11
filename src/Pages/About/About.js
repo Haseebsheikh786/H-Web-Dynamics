@@ -53,7 +53,7 @@ const AboutUs = () => {
         <Container fluid className="my-5">
           <Row>
             <div className="col-lg-12 col-xl-6">
-              <h1 className="mb-3">Who we serve</h1>
+              <h1 className="mb-3">WHO WE SERVE</h1>
               <p className="">
                 Our clientele spans a wide spectrum, ranging from burgeoning
                 startups seeking to establish their digital footprint to
